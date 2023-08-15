@@ -112,6 +112,13 @@
 	html {
 		font-size: 43.57%;
 	}
+	header {
+		background-image: linear-gradient(
+				rgba(34, 34, 34, 0.805),
+				rgba(34, 34, 34, 0.6)
+			),
+			url('pic/hero-image-smallScreens.jpg');
+	}
 	.header-title {
 		font-size: 4.4rem;
 	}

@@ -57,7 +57,7 @@ document.querySelector('.btn-register').addEventListener('click', function (e) {
 	const id = e.target.getAttribute('href');
 	document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
 	// console.log(e.target);
-	mobileBtn.classList.toggle('nav-open');
+	mobileBtn.classList.toggle('nav-logo-open');
 	nav.classList.toggle('mobile-nav');
 });
 
@@ -165,15 +165,20 @@ const imgTarget = document.querySelectorAll('.image');
 
 const loadImg = function (entries, observer) {
 	const [entry] = entries;
-	if (!entry.isIntersecting) return;
-	entry.target.classList.remove('lazy-img');
+	if (!entry.isIntersecting) {
+		return;
+	}
+	entry.target.src = entry.target.src;
+	entry.target.addEventListener('load', function () {
+		entry.target.classList.remove('lazy-img');
+	});
 	observer.unobserve(entry.target);
 };
 
 const imgObserver = new IntersectionObserver(loadImg, {
 	root: null,
 	threshold: 0,
-	rootMargin: '-100px',
+	rootMargin: '-200px',
 });
 imgTarget.forEach((img) => imgObserver.observe(img));
 
