@@ -247,4 +247,7 @@
 	.footer-item {
 		font-size: 1.4rem;
 	}
+	.lazy-img {
+		filter: blur(0px);
+	}
 }
