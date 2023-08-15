@@ -125,7 +125,9 @@
 	.hero {
 		padding: 4.4rem 6.8rem;
 	}
-
+.lazy-img {
+		filter: none;
+	}
 	.nav-logo {
 		width: 4rem;
 		height: 4rem;
@@ -247,7 +249,5 @@
 	.footer-item {
 		font-size: 1.4rem;
 	}
-	.lazy-img {
-		filter: blur(0px);
-	}
+	
 }
